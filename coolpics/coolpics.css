@@ -61,7 +61,9 @@ h2 {
 }
 
 .gallery {
-  display: flex;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -70,12 +72,18 @@ figure {
   margin: 5px;
 }
 
-footer {
-  background
+/* footer {
+  background */
 
 /* media query for screen size */
 @media screen and (min-width: 700px) {
   .gallery {
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
